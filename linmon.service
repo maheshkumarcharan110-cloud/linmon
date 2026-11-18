@@ -1,0 +1,23 @@
+# Example systemd unit for linmon.
+# Adjust User, WorkingDirectory, ExecStart and the log path for your host.
+[Unit]
+Description=linmon system monitor
+Documentation=https://github.com/linmon/linmon
+After=network.target
+
+[Service]
+Type=simple
+User=linmon
+Group=linmon
+WorkingDirectory=/opt/linmon
+Environment=PATH=/opt/linmon/.venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ExecStart=/opt/linmon/.venv/bin/linmon --live --interval 5 --log /var/log/linmon/linmon.csv --alert-cpu 90 --alert-ram 85
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/log/linmon
+
+[Install]
+WantedBy=multi-user.target

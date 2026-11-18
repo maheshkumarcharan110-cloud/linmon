@@ -1,0 +1,4 @@
+# Runtime dependencies for linmon.
+# Test/lint tools are declared as the "dev" extra in pyproject.toml.
+psutil>=5.9,<8
+rich>=13.0,<16
