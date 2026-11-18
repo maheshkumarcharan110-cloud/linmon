@@ -1,25 +1,46 @@
 # Python environments and caches
-.venv/
 venv/
+.venv/
+env/
+ENV/
 __pycache__/
 *.py[cod]
 *.egg-info/
+.eggs/
 .pytest_cache/
 .ruff_cache/
 .mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
 
 # Build and package output
 build/
 dist/
 *.deb
+*.whl
 
-# Local logs and snapshots
+# Local logs, data and snapshots
+*.log
 *.csv
 *.jsonl
-*.log
+*.db
+*.sqlite
+*.sqlite3
+*.dat
+*.tmp
+stats.csv
+readings.csv
 readings.json
+snapshot.json
+
+# Secrets and environment files
+.env
+.env.*
+!.env.example
 
 # Editors / OS
-.idea/
-.vscode/
 .DS_Store
+.vscode/
+.idea/
+*.swp
