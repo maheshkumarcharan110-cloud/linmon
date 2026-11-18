@@ -179,12 +179,14 @@ The package installs `/usr/bin/linmon` and depends only on `python3 (>= 3.10)`.
 
 ## Screenshots
 
-This repository is text-only; no binary screenshots are committed. To capture
-your own, run the live dashboard and take a terminal screenshot:
+![linmon live dashboard](docs/screenshot.png)
 
-```bash
-linmon --live --interval 1 --top 5
-```
+> Placeholder: replace `docs/screenshot.png` with a real terminal capture when
+> available. To capture one, run the live dashboard and take a screenshot:
+>
+> ```bash
+> linmon --live --interval 1 --top 5
+> ```
 
 Example snapshot output:
 
